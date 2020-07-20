@@ -1,0 +1,21 @@
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  color: #999999;
+}
+
+.avatar {
+  border-radius: 20%;
+  float: left;
+  margin: 0 0 20px 20px;
+
+
+}
+
+.page-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  font-family: "Verdana", sans-serif;
+  text-align: center;
+}

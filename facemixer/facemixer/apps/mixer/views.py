@@ -16,6 +16,7 @@ def index(request):
 
 
 def mix(request):
+    print(request.POST.get('fst_image'))
     length = Photo.objects.count()
     fst = Photo.objects.get(id=random.randint(1, length))
     scd = Photo.objects.get(id=random.randint(1, length))

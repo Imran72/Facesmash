@@ -4,7 +4,19 @@
 {% block title %}Сравнение котиков{% endblock %}
 
 {% block content %}
-    {% if fst %}
-        <img src="{{fst.photo.url}}" alt='cat' class="img-thumbnail"/>
-    {% endif %}
+    <header>
+      <h1 class="page-title">FaceMixer</h1>
+    </header>
+    <p>
+        <button type="submit" name="fst" class="avatar">
+            {% if fst and scd %}
+                <img src="{{fst.photo.url}}" alt='cat' width="350" height="350" />
+            {% endif %}
+        </button>
+        <button type="submit" name="scd" class="avatar">
+            {% if fst %}
+                <img src="{{scd.photo.url}}" alt='cat' width="350" height="350" />
+            {% endif %}
+        </button>
+    </p>
 {%endblock%}
