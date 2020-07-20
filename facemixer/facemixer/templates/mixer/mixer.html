@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Сравнение котиков{% endblock %}
+
+{% block content %}
+    {% if fst %}
+        <img src="{{fst.photo.url}}" alt='cat' class="img-thumbnail"/>
+    {% endif %}
+{%endblock%}
