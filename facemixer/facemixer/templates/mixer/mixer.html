@@ -8,15 +8,21 @@
       <h1 class="page-title">FaceMixer</h1>
     </header>
     <p>
-        <button type="submit" name="fst" class="avatar">
-            {% if fst and scd %}
+        <form action="" method="POST">
+        {% csrf_token %}
+        <button type="submit" name="{{fst.id}}?{{scd.id}}" class="avatar">
+            {% if fst%}
                 <img src="{{fst.photo.url}}" alt='cat' width="350" height="350" />
             {% endif %}
         </button>
-        <button type="submit" name="scd" class="avatar">
-            {% if fst %}
+        </form>
+        <form action="" method="POST">
+        {% csrf_token %}
+        <button type="submit" name="{{scd.id}}?{{fst.id}}" class="avatar">
+            {% if scd %}
                 <img src="{{scd.photo.url}}" alt='cat' width="350" height="350" />
             {% endif %}
         </button>
+        </form>
     </p>
 {%endblock%}

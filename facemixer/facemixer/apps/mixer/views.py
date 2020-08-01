@@ -16,7 +16,18 @@ def index(request):
 
 
 def mix(request):
-    print(request.POST.get('fst_image'))
+    if request.POST:
+        winner_id, loser_id = list(request.POST.keys())[1].split('?')
+        winner = Photo.objects.get(id=winner_id)
+        loser = Photo.objects.get(id=loser_id)
+        EA = 1 / (1 + 10 ** ((loser.photo_rating - winner.photo_rating) / 400))
+        EB = 1 / (1 + 10 ** ((winner.photo_rating - loser.photo_rating) / 400))
+        RA = winner.photo_rating + 20 * (1 - EA)
+        RB = loser.photo_rating + 20 * (0 - EB)
+        winner.photo_rating = RA
+        loser.photo_rating = RB
+        winner.save()
+        loser.save()
     length = Photo.objects.count()
     fst = Photo.objects.get(id=random.randint(1, length))
     scd = Photo.objects.get(id=random.randint(1, length))
