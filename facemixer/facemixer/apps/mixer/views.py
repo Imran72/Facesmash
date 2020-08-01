@@ -16,6 +16,7 @@ def index(request):
 
 
 def mix(request):
+    '''
     if request.POST:
         winner_id, loser_id = list(request.POST.keys())[1].split('?')
         winner = Photo.objects.get(id=winner_id)
@@ -28,6 +29,7 @@ def mix(request):
         loser.photo_rating = RB
         winner.save()
         loser.save()
+    '''
     length = Photo.objects.count()
     fst = Photo.objects.get(id=random.randint(1, length))
     scd = Photo.objects.get(id=random.randint(1, length))

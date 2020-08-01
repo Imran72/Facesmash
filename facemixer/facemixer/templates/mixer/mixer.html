@@ -10,15 +10,15 @@
     <p>
         <form action="" method="POST">
         {% csrf_token %}
-        <button type="submit" name="{{fst.id}}?{{scd.id}}" class="avatar">
+        <button type="submit" name="{{fst.id}}?{{scd.id}}">
             {% if fst%}
-                <img src="{{fst.photo.url}}" alt='cat' width="350" height="350" />
+                <img src="{{fst.photo.url}}" alt='cat' width="350" height="350" class="img1"/>
             {% endif %}
         </button>
         </form>
         <form action="" method="POST">
         {% csrf_token %}
-        <button type="submit" name="{{scd.id}}?{{fst.id}}" class="avatar">
+        <button type="submit" name="{{scd.id}}?{{fst.id}}">
             {% if scd %}
                 <img src="{{scd.photo.url}}" alt='cat' width="350" height="350" />
             {% endif %}

@@ -5,3 +5,4 @@ urlpatterns = [
     path('addCat/', views.index, name='index'),
     path('mixer/', views.mix, name='mix'),
 ]
+

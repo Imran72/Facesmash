@@ -4,12 +4,17 @@
   color: #999999;
 }
 
-.avatar {
-  border-radius: 20%;
-  float: left;
-  margin: 0 0 20px 20px;
-
-
+.img1 {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 5px;
+  width: 150px;
+}
+.img2 {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
 }
 
 .page-title {
@@ -17,5 +22,5 @@
   font-size: 36px;
   line-height: 42px;
   font-family: "Verdana", sans-serif;
-  text-align: center;
+  text-align: left;
 }
