@@ -4,17 +4,12 @@
   color: #999999;
 }
 
-.img1 {
+.img {
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 5px;
-  width: 150px;
-}
-.img2 {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
+  width:350px;
+  height:350px;
 }
 
 .page-title {
@@ -22,5 +17,21 @@
   font-size: 36px;
   line-height: 42px;
   font-family: "Verdana", sans-serif;
-  text-align: left;
+  text-align: center;
+}
+
+.form1 {
+    float: left;
+    margin-left: 295px;
+}
+.form2 {
+    float: left;
+    margin-left: 10px;
+}
+
+.or {
+  float: left;
+  margin-left: 10px;
+  font-size: 250%;
+  margin-top: 100px;
 }

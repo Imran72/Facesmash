@@ -8,19 +8,24 @@
       <h1 class="page-title">FaceMixer</h1>
     </header>
     <p>
-        <form action="" method="POST">
+        <form action="" method="POST" class="form1">
         {% csrf_token %}
         <button type="submit" name="{{fst.id}}?{{scd.id}}">
             {% if fst%}
-                <img src="{{fst.photo.url}}" alt='cat' width="350" height="350" class="img1"/>
+                <img src="{{fst.photo.url}}" alt='cat' class="img"/>
             {% endif %}
         </button>
         </form>
-        <form action="" method="POST">
+    </p>
+    <p class="or">
+        OR
+    </p>
+    <p>
+        <form action="" method="POST" class="form2">
         {% csrf_token %}
         <button type="submit" name="{{scd.id}}?{{fst.id}}">
             {% if scd %}
-                <img src="{{scd.photo.url}}" alt='cat' width="350" height="350" />
+                <img src="{{scd.photo.url}}" alt='cat' class="img" />
             {% endif %}
         </button>
         </form>
