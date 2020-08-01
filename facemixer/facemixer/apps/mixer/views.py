@@ -38,3 +38,9 @@ def mix(request):
         'scd': scd
     }
     return render(request, 'mixer/mixer.html', context)
+
+
+def top(request):
+    top = Photo.objects.all().order_by('-photo_rating')[:5]
+    context = {'top': {i.id: i for i in top}}
+    return render(request, 'mixer/top.html', context)

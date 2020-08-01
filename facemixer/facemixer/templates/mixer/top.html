@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}ТОП КОТОВ{% endblock %}
+
+{% block content %}
+    <header>
+      <h1 class="page-title">Top Cats</h1>
+    </header>
+    {% if top %}
+        {% for keys in top.values %}
+            <p>
+                <img src="{{keys.photo.url}}" alt='cat' class="top"/>
+            </p>
+        {% endfor %}
+    {% else %}
+        Данных нет...
+    {% endif %}
+{%endblock%}
